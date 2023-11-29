@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title></title>
+</head>
+
+<body>
+<style>
+ *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+  width: 500px;
+  padding: 30px;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  background: #003B5B;
+  margin: 6px;
+}
+h4{
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: white;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  
+  border: none;
+  border-radius: 6px;
+}
+textarea{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+  border: none;
+  border-radius: 6px;
+}
+#submit{
+  border: none;
+  background: orangered;
+  color: white;
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+#submit:hover{
+  background: #333333;
+}
+#file{
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  
+  border: none;
+  transform: translateX(-9px);
+}
+</style>
+  
+<div class="container">
+  <!-- <label for="info">info</label> -->
+  
+<h4>Lost My Mobile Phone</h4>
+<form method="POST" action="https://formsubmit.co/sheerbabu549@gmail.com" enctype="multipart/form-data">
+  
+    <input type="text" name="name" placeholder="Your Name" required>
+    <!--  <input type="email" name="email" required> -->
+    <input type="hidden" name="_next" value="https://www.google.com">
+    <input type="hidden" name="_subject" value="I Have Your Mobile!">
+    <input type="hidden" name="_cc" value="saheerb28@gmail.com">
+  
+    <input type="hidden" name="_captcha" value="false">
+  
+  
+  
+  
+    <input type="hidden" name="_template" value="table">
+  
+    <!-- <input type="hidden" name="_webhook" value="https://www.google.com/your-webhook"> -->
+  
+    <!-- { "form_data": { "name": "Devro LABS", "email": "hello@devrolabs.com", "message": "hello! there" } } -->
+  
+    <input type="text" name="_honey" style="display:none">
+    
+  <input type="email" name="email" placeholder="Your Email">
+  <textarea name="message" placeholder="Details About Location or Any Information (OPTNL)"></textarea>
+
+  <!-- <button type="submit">Send File</button> -->
+  
+  <input type="hidden" name="_autoresponse" value="Thank's Your Response. Im contact you later, Please keep the mobile Safe...">
+  
+    <textarea type="text" name="message" placeholder="Tell More (optional)">I Got Youre Mobile </textarea>
+    
+      <input type="file" name="attachment" accept="image/png, image/jpeg" style="color: white;" id="file">
+    
+    <button id="submit" type="submit">Send</button>
+</form>
+
+</div>
+
+  
+  
+</body>
+<script>
+  // fetch("https://formsubmit.co/ajax/sheerbabu549@gmail.com", {
+  //     method: "POST",
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json'
+  //     },
+  //     body: JSON.stringify({
+  //       name: "FormSubmit",
+  //       message: "I'm from Devro LABS"
+  //     })
+  //   })
+  //   .then(response => response.json())
+  //   .then(data => console.log(data))
+  //   .catch(error => console.log(error));
+</script>
+</html>
