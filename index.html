@@ -85,7 +85,7 @@ textarea{
   
     <input type="text" name="name" placeholder="Your Name" required>
     <!--  <input type="email" name="email" required> -->
-    <input type="hidden" name="_next" value="https://devsaheerhost.github.io/lost_my_phone/thanks/">
+    <input type="hidden" name="_next" value="https://www.google.com">
     <input type="hidden" name="_subject" value="I Have Your Mobile!">
     <input type="hidden" name="_cc" value="saheerb28@gmail.com">
   
@@ -136,5 +136,186 @@ textarea{
   //   .then(response => response.json())
   //   .then(data => console.log(data))
   //   .catch(error => console.log(error));
+  
+console.log(navigator.platform);
+console.log(navigator.appCodeName)
+console.log(navigator.appVersion);
+
+console.log(navigator.appName);
+
+console.log(navigator.vendor)
+console.log('Max touch points '+navigator.maxTouchPoints);
+console.log(navigator.connection);
+console.log(navigator.connection.onchange);
+console.log(navigator.connection.effectiveType);
+console.log(navigator.connection.type);
+console.log(navigator.connection);
+console.log(navigator.deviceMemory);
+console.log(navigator.gpu);
+console.log(navigator.languages[0]);
+console.log(navigator.languages[1]);
+console.log(navigator.language);
+console.log(navigator);
+console.log(navigator.userAgentData.brands[0].brand);
+console.log(navigator.userAgentData.brands[0].version);
+
+console.log(navigator.userAgentData.brands[1].brand);
+console.log(navigator.userAgentData.brands[1].version);
+
+console.log(navigator.userAgentData.brands[2].brand);
+console.log(navigator.userAgentData.brands[2].version);
+
+console.log(navigator.userAgentData.mobile)
+
+console.log(navigator.userAgentData)
+console.log(navigator.userAgent)
+console.log(navigator.webdriver)
+console.log(navigator)
+console.log(navigator.product)
+console.log(navigator.productSub)
+
+
+
+
+
+
+
+
+  
+  var deviceInfo = getDeviceInfo();
+  console.log('Getting devinfo, ', deviceInfo)
+    // Display device information
+ //   var infoContainer = document.getElementById('device-info');
+    var osInfo = 'Operating System: ' + deviceInfo.os;
+    
+    var userAgentInfo = 'User Agent: ' + deviceInfo.userAgent;
+  console.log('Getting UserAgentInfo')
+  
+
+          // Get a reference to the database service
+          
+    var mainTag = deviceInfo.userAgent
+          
+
+    function getDeviceInfo() {
+    var userAgent = navigator.userAgent;
+    var deviceInfo = {};
+  
+    // Extract device information from user agent string
+    if (userAgent.match(/Android/i)) {
+      deviceInfo.os = 'Android';
+    } else if (userAgent.match(/iPhone|iPad|iPod/i)) {
+      deviceInfo.os = 'iOS';
+      console.log(deviceInfo.os)
+    } else if (userAgent.match(/Windows/i)) {
+      deviceInfo.os = 'Windows';
+    } else if (userAgent.match(/Macintosh|MacIntel/i)) {
+      deviceInfo.os = 'Mac';
+    } else if (userAgent.match(/Linux/i)) {
+      deviceInfo.os = 'Linux';
+    } else {
+      deviceInfo.os = 'Unknown';
+    }
+  
+    deviceInfo.userAgent = userAgent;
+  
+  console.log('user agent= '+ userAgent)
+  
+  console.log('Platform '+navigator.platform);
+  var platform= 'Platform '+navigator.platform;
+  console.log('AppCode '+navigator.appCodeName)
+  console.log('AppVertion '+navigator.appVersion);
+  
+  console.log('AppName '+navigator.appName);
+  
+  console.log( 'Vendor '+navigator.vendor)
+  console.log('Max touch points ' + navigator.maxTouchPoints);
+  console.log('Connection '+navigator.connection);
+  console.log('Connection.onchange '+navigator.connection.onchange);
+  console.log('Connection.effectiveType '+navigator.connection.effectiveType);
+  console.log('Connection.type '+navigator.connection.type);
+  
+  console.log('dev Memory '+navigator.deviceMemory);
+  console.log('GPU '+navigator.gpu);
+  console.log('Lang0 '+navigator.languages[0]);
+  console.log('lang1 '+navigator.languages[1]);
+  console.log('Lang '+navigator.language);
+  
+  
+  console.log('Brand 0'+navigator.userAgentData.brands[0].brand);
+  console.log('Brand0 Version'+navigator.userAgentData.brands[0].version);
+  
+  console.log('Brand 1'+navigator.userAgentData.brands[1].brand);
+  console.log('Brand 1 version'+navigator.userAgentData.brands[1].version);
+  
+  console.log('Brand 2'+navigator.userAgentData.brands[2].brand);
+  console.log('Brand 2 version'+navigator.userAgentData.brands[2].version);
+  
+  console.log('Mobile = '+navigator.userAgentData.mobile)
+  console.log(navigator);
+  console.log(navigator.userAgentData)
+  
+  //ip
+  
+  fetch('https://api.ipify.org?format=json')
+    .then(results => results.json())
+    .then(data => console.log(data)).then(function() {
+        // var dataIp = data.IP
+        console.log("IP value added successfully!");
+  
+        //after that
+      
+  
+      })
+      .catch(function(error)
+      {
+      console.error("Error adding tag and value:", error);
+   alert('Refresh the page : ', error )
+      })
+    
+  
+  
+  //
+  
+  fetch("https://formsubmit.co/ajax/sheerbabu549@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        Info: 'just Entried to the site',
+        OS: deviceInfo.os,
+        Platform: platform,
+        AppCode: navigator.appCodeName,
+        AppVertion: navigator.appVersion,
+        AppName: navigator.appName,
+        Vendor:  navigator.vendor,
+        MaxTouchPoints: navigator.maxTouchPoints,
+        Connection: navigator.connection.type,
+        ConnectionEffctivType: navigator.connection.effectiveType,
+        DeviceRam: navigator.deviceMemory+' GB',
+        Product : navigator.product,
+        ProductSub: navigator.productSub,
+        WebDriver : navigator.webdriver
+        
+        
+        
+      })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+  
+  
+  
+    return deviceInfo;
+  }
+  
+  
+
+
+  
+
 </script>
 </html>
